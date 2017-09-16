@@ -7,9 +7,11 @@ alias bash_subl='subl ~/.bashrc'
 
 # Print each PATH entry on a separate line
 alias path='echo -e ${PATH//:/\\n}'
-
 alias h='history'
+
+# Network
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias wifi-restart="sudo service network-manager restart"
 
 # Navigation
 alias ..="cd .."
