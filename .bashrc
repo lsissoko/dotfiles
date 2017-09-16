@@ -1,6 +1,4 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+#!/usr/bin/env bash
 
 # If not running interactively, don't do anything
 case $- in
@@ -93,39 +91,22 @@ alias l='ls -CF'
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+# Function definitions
 if [ -f ~/.functions ]; then
     . ~/.functions
 fi
 
-if [ -f ~/.bash_aliases ]; then
-    . ~/.bash_aliases
+# Alias definitions
+if [ -f ~/.aliases ]; then
+    . ~/.aliases
 fi
 
-
-
-#########################################################################
-#########################################################################
-#########################################################################
-#########################################################################
-
-
-
-# function parse_git_branch () {
-#   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
-# }
-
+# Terminal prompt
 RED="\[\033[0;31m\]"
 YELLOW="\[\033[0;33m\]"
 GREEN="\[\033[0;32m\]"
 BLUE="\[\033[0;34m\]"
 NO_COLOR="\[\033[0m\]"
-
 PS1="$GREEN\u@\h$BLUE:\w$YELLOW\$(parse_git_branch)"
 PS1="\n$PS1\n$NO_COLOR\$ "
 # PS1="\n$PS1\n$BLUE\$ $NO_COLOR"
-
