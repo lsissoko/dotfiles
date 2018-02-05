@@ -2,6 +2,12 @@
 - `sudo apt-get install indicator-multiload`
 - log out, log back in
 
+### caffeine
+```sh
+sudo add-apt-repository ppa:caffeine-developers/ppa
+sudo apt-get update
+sudo apt-get install caffeine
+```
 
 #### Add "Restart" option to system menu
 - `sudo apt-get install dconf-tools`
@@ -37,6 +43,10 @@ sudo apt-get install libappindicator1
 
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
+
+
+# firefox (developer edition)
+- https://gist.github.com/lsissoko/2d84d031278336df99039af2af911139
 
 
 #### sublime text
