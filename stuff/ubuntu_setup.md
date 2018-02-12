@@ -1,6 +1,9 @@
+
+# System
+
 #### system load indicator
-- `sudo apt-get install indicator-multiload`
-- log out, log back in
+`sudo apt-get install indicator-multiload`
+
 
 #### caffeine
 ```sh
@@ -9,28 +12,19 @@ sudo apt-get update
 sudo apt-get install caffeine
 ```
 
-#### Add "Restart" option to system menu
-- `sudo apt-get install dconf-tools`
-- http://sourcedigit.com/15942-get-restart-option-in-ubuntu-system-menu-in-ubuntu-15-0414-1014-04/
-
-
-#### curl
+#### redshift (brightness)
 ```sh
-sudo apt-get install curl
+sudo apt-get install redshift redshift-gtk
 ```
 
-
-#### git
+#### add "restart" option to system menu
 ```sh
-sudo apt-get install git
+sudo apt-get install dconf-tools
+
+# Once installed, open the dconf Editor from Unity dash
+# Navigate to apps > indicator-session
+# Check the value box after "suppress-logout-restart-shutdown"
 ```
-
-
-#### vim
-```sh
-sudo apt-get install vim
-```
-
 
 #### chrome
 ```sh
@@ -44,10 +38,19 @@ sudo apt-get install libappindicator1
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
+# Dev Tools
 
 #### firefox (developer edition)
 - https://gist.github.com/lsissoko/2d84d031278336df99039af2af911139
 
+#### curl
+`sudo apt-get install curl`
+
+#### git
+`sudo apt-get install git`
+
+#### vim
+`sudo apt-get install vim`
 
 #### sublime text
 ```sh
@@ -57,7 +60,6 @@ sudo apt-get update
 sudo apt-get install sublime-text
 ```
 
-
 #### intellij
 ```sh
 sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
@@ -66,19 +68,14 @@ sudo apt-get install ubuntu-make
 umake idea
 ```
 
-
 #### node
 ```sh
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
 sudo apt-get install -y nodejs
 ```
 
-
 #### grunt
-```sh
-npm install -g grunt
-```
-
+`npm install -g grunt`
 
 #### sbt
 ```sh
@@ -88,8 +85,7 @@ sudo apt-get update
 sudo apt-get install sbt
 ```
 
-
 #### docker
-- https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04
-- https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04
-- https://docs.docker.com/machine/install-machine/#installing-machine-directly
+- [`docker`](https://www.digitalocean.com/community/tutorials/how-to-install-and-use-docker-on-ubuntu-16-04)
+- [`docker-compose`](https://www.digitalocean.com/community/tutorials/how-to-install-docker-compose-on-ubuntu-16-04)
+- [`docker-machine`](https://docs.docker.com/machine/install-machine/#installing-machine-directly)
