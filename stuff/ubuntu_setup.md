@@ -4,6 +4,8 @@
 #### system load indicator
 `sudo apt-get install indicator-multiload`
 
+#### htop
+`sudo apt-get install htop`
 
 #### caffeine
 ```sh
