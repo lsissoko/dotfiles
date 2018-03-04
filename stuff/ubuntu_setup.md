@@ -1,6 +1,9 @@
 
 # System
 
+### show username on panel
+`gsettings set com.canonical.indicator.session show-real-name-on-panel true`
+
 #### system load indicator
 `sudo apt-get install indicator-multiload`
 
