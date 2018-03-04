@@ -1,7 +1,7 @@
 
 # System
 
-### show username on panel
+#### show username on panel
 `gsettings set com.canonical.indicator.session show-real-name-on-panel true`
 
 #### system load indicator
