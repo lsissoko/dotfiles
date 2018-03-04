@@ -28,6 +28,9 @@ sudo apt-get install dconf-tools
 # Check the value box after "suppress-logout-restart-shutdown"
 ```
 
+#### enable one-click to minimize
+`gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true`
+
 #### chrome
 ```sh
 cd ~/Desktop
