@@ -47,13 +47,24 @@ sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
 #### disable IPv6
+Edit `/etc/sysctl.conf` file
 ```sh
-$ cat << EOT >> /etc/sysctl.conf
+cat << EOT >> /etc/sysctl.conf
 >
 > net.ipv6.conf.all.disable_ipv6 = 1
 > net.ipv6.conf.default.disable_ipv6 = 1
 > net.ipv6.conf.lo.disable_ipv6 = 1
 > EOT
+```
+
+Load changes
+```sh
+sudo sysctl -p
+```
+
+Verify changes (`1` if disabled)
+```sh
+cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 ```
 
 # Dev Tools
