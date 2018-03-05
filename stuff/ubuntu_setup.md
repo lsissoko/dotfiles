@@ -46,6 +46,16 @@ sudo apt-get install libappindicator1
 sudo dpkg -i google-chrome-stable_current_amd64.deb
 ```
 
+#### disable IPv6
+```sh
+$ cat << EOT >> /etc/sysctl.conf
+>
+> net.ipv6.conf.all.disable_ipv6 = 1
+> net.ipv6.conf.default.disable_ipv6 = 1
+> net.ipv6.conf.lo.disable_ipv6 = 1
+> EOT
+```
+
 # Dev Tools
 
 #### firefox (developer edition)
