@@ -97,6 +97,16 @@ sudo apt-get install ubuntu-make
 umake idea
 ```
 
+#### virtualenv
+One of these should work
+
+- `sudo apt-get install python-virtualenv`
+- `sudo easy_install virtualenv`
+- `sudo pip install virtualenv`
+
+#### mysql
+`sudo apt-get install mysql-server`
+
 #### node
 ```sh
 curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
