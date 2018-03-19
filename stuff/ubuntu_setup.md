@@ -1,6 +1,9 @@
 
 # System
 
+#### show username on panel
+`gsettings set com.canonical.indicator.session show-real-name-on-panel true`
+
 #### system load indicator
 `sudo apt-get install indicator-multiload`
 
@@ -28,6 +31,9 @@ sudo apt-get install dconf-tools
 # Check the value box after "suppress-logout-restart-shutdown"
 ```
 
+#### enable one-click to minimize
+`gsettings set org.compiz.unityshell:/org/compiz/profiles/unity/plugins/unityshell/ launcher-minimize-window true`
+
 #### chrome
 ```sh
 cd ~/Desktop
@@ -38,6 +44,27 @@ sudo apt-get -f install
 sudo apt-get install libappindicator1
 
 sudo dpkg -i google-chrome-stable_current_amd64.deb
+```
+
+#### disable IPv6
+Edit `/etc/sysctl.conf` file
+```sh
+cat << EOT >> /etc/sysctl.conf
+>
+> net.ipv6.conf.all.disable_ipv6 = 1
+> net.ipv6.conf.default.disable_ipv6 = 1
+> net.ipv6.conf.lo.disable_ipv6 = 1
+> EOT
+```
+
+Load changes
+```sh
+sudo sysctl -p
+```
+
+Verify changes (`1` if disabled)
+```sh
+cat /proc/sys/net/ipv6/conf/all/disable_ipv6
 ```
 
 # Dev Tools
@@ -69,6 +96,16 @@ sudo apt-get update
 sudo apt-get install ubuntu-make
 umake idea
 ```
+
+#### virtualenv
+One of these should work
+
+- `sudo apt-get install python-virtualenv`
+- `sudo easy_install virtualenv`
+- `sudo pip install virtualenv`
+
+#### mysql
+`sudo apt-get install mysql-server`
 
 #### node
 ```sh
