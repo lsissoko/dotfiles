@@ -1,0 +1,34 @@
+#!/usr/bin/env bash
+
+# .bashrc
+alias bash_reload=". ~/.bashrc"
+alias bash_vi='vi ~/.bashrc'
+alias bash_subl='subl ~/.bashrc'
+alias bash_a_vi='vi ~/.aliases'
+alias bash_a_subl='subl ~/.aliases'
+alias bash_f_vi='vi ~/.functions'
+alias bash_f_subl='subl ~/.functions'
+
+# Print each PATH entry on a separate line
+alias path='echo -e ${PATH//:/\\n}'
+alias h='history'
+
+# Network
+alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias wifi-restart="sudo service network-manager restart"
+
+# Navigation
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+
+# Shortcuts
+alias home="cd ~"
+alias desk="cd ~/Desktop"
+alias docs="cd ~/Documents"
+alias dl="cd ~/Downloads"
+alias code="cd ~/code"
+
+# File explorer
+alias explorer="open ."
