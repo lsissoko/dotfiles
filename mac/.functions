@@ -9,6 +9,11 @@ function mkd() {
     mkdir -p "$@" && cd "$_";
 }
 
+# Create a new file and its parent directory tree
+function touch2() {
+    mkdir -p "$(dirname "$1")" && touch "$1";
+}
+
 # Create a .tar.gz archive, using `zopfli`, `pigz` or `gzip` for compression
 function targz() {
     local tmpFile="${@%/}.tar";
