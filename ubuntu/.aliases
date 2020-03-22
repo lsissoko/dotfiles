@@ -17,6 +17,12 @@ alias h='history'
 alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
 alias wifi-restart="sudo service network-manager restart"
 
+# Audio
+alias audio-restart="pulseaudio -k"
+
+alias wttr='curl wttr.in'
+alias wttrV2='curl wttr.in/?format=v2'
+
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
