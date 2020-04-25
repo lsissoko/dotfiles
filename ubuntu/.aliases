@@ -20,9 +20,6 @@ alias wifi-restart="sudo service network-manager restart"
 # Audio
 alias audio-restart="pulseaudio -k"
 
-alias wttr='curl wttr.in'
-alias wttrV2='curl wttr.in/?format=v2'
-
 # Navigation
 alias ..="cd .."
 alias ...="cd ../.."
@@ -46,6 +43,9 @@ alias gpo='git push origin'
 alias gcm='git commit -am'
 alias go='git checkout'
 alias gob='git checkout -b'
+
+# VS Code (resolve conflict with `code` alias for ~/code directory)
+alias vscode='/snap/bin/code'
 
 # MySQL
 alias mysql_check="ps ax | grep mysql"

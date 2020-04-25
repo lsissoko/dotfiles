@@ -1,6 +1,10 @@
 
 # System
 
+echo '#### Looking for updates'
+sudo apt-get update
+echo
+
 echo '#### system load indicator'
 sudo apt-get install indicator-multiload
 echo
@@ -48,6 +52,10 @@ echo '#### curl'
 sudo apt-get install curl
 echo
 
+echo '#### httpie'
+sudo apt-get install httpie
+echo
+
 echo '#### git'
 sudo apt-get install git
 echo
@@ -67,12 +75,12 @@ echo
 # sudo apt-get install sublime-text
 # echo
 
-echo '#### intellij'
-sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
-sudo apt-get update
-sudo apt-get install ubuntu-make
-umake idea
-echo
+# echo '#### IntelliJ IDEA'
+# sudo add-apt-repository ppa:ubuntu-desktop/ubuntu-make
+# sudo apt-get update
+# sudo apt-get install ubuntu-make
+# umake idea
+# echo
 
 echo '#### virtualenv'
 # `sudo apt-get install python-virtualenv`
@@ -84,13 +92,23 @@ echo '#### mysql'
 sudo apt-get install mysql-server
 echo
 
-echo '#### node'
-curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
-sudo apt-get install -y nodejs
+# echo '#### node'
+# curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
+# sudo apt-get install -y nodejs
+# echo
+
+echo '#### nvm + node'
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.35.3/install.sh | bash
+nvm install node
+nvm install --lts
 echo
 
-echo '#### grunt'
-npm install -g grunt
+# echo '#### grunt'
+# npm install -g grunt
+# echo
+
+echo '#### Ammonite'
+sudo sh -c '(echo "#!/usr/bin/env sh" && curl -L https://github.com/lihaoyi/Ammonite/releases/download/2.1.0/2.13-2.1.0) > /usr/local/bin/amm && chmod +x /usr/local/bin/amm' && amm
 echo
 
 echo '#### sbt'
