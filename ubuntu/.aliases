@@ -14,7 +14,7 @@ alias path='echo -e ${PATH//:/\\n}'
 alias h='history'
 
 # Network
-alias ip='dig +short myip.opendns.com @resolver1.opendns.com'
+alias ip='curl ipinfo.io'
 alias wifi-restart="sudo service network-manager restart"
 
 # Audio
