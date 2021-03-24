@@ -32,3 +32,6 @@ alias code="cd ~/code"
 
 # File explorer
 alias explorer="open ."
+
+# Audio
+alias audio-restart="kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`"
