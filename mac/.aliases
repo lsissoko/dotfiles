@@ -43,3 +43,6 @@ alias gpo='git push origin'
 alias gcm='git commit -am'
 alias go='git checkout'
 alias gob='git checkout -b'
+
+# VS Code (resolve conflict with `code` alias for ~/code directory)
+alias vscode='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
