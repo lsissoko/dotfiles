@@ -35,3 +35,11 @@ alias explorer="open ."
 
 # Audio
 alias audio-restart="kill -9 `ps ax | grep 'coreaudio[a-z]' | awk '{print $1}'`"
+
+# Git
+alias gb='git branch'
+alias gf='git fetch'
+alias gpo='git push origin'
+alias gcm='git commit -am'
+alias go='git checkout'
+alias gob='git checkout -b'
