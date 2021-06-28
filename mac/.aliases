@@ -46,3 +46,6 @@ alias gob='git checkout -b'
 
 # VS Code (resolve conflict with `code` alias for ~/code directory)
 alias vscode='/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code'
+
+# Sublime Text
+alias subl="/Applications/Sublime Text.app/Contents/SharedSupport/bin/subl"
